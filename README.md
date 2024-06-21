@@ -2,6 +2,8 @@
 
     - Create React App  using (npx create-react-app app-name)
     - Configured Tailwind
+    - Header
+    - Login Form
 
 # Features
 
