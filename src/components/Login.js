@@ -1,0 +1,61 @@
+import React, { useState } from "react";
+import Header from "./Header";
+
+const Login = () => {
+  const [isSignInForm, setIsSignInForm] = useState(true);
+
+  const toggleSignInForm = () => {
+    setIsSignInForm(!isSignInForm);
+  };
+
+  return (
+    <div>
+      <Header />
+      <div className="absolute">
+        <img
+          alt="logo"
+          src="https://assets.nflxext.com/ffe/siteui/vlv3/a56dc29b-a0ec-4f6f-85fb-50df0680f80f/2f8ae902-8efe-49bb-9a91-51b6fcc8bf46/IN-en-20240617-popsignuptwoweeks-perspective_alpha_website_medium.jpg"
+        />
+      </div>
+      <div className="grid place-items-center h-screen">
+        <form className="w-3/12 relative p-12 bg-black text-white rounded-md bg-opacity-80">
+          <h3 className="font-bold text-3xl py-4">
+            {isSignInForm ? "Sign In" : "Sign Up"}
+          </h3>
+
+          {!isSignInForm && (
+            <input
+              type="text"
+              placeholder="Full Name"
+              className="p-2 my-2 w-full bg-gray-700 rounded-md"
+            />
+          )}
+
+          <input
+            type="text"
+            placeholder="Email Address"
+            className="p-2 my-2 w-full bg-gray-700 rounded-md"
+          />
+
+          <input
+            type="password"
+            placeholder="Password"
+            className="p-2 my-2 w-full bg-gray-700 rounded-md"
+          />
+
+          <button className="my-2 p-2 w-full bg-red-700 rounded-md">
+            {isSignInForm ? "Sign In" : "Sign Up"}
+          </button>
+
+          <p className="py-4 cursor-pointer" onClick={toggleSignInForm}>
+            {isSignInForm
+              ? "New to Netflix? Sign up now."
+              : "Already registered? Sign in now."}
+          </p>
+        </form>
+      </div>
+    </div>
+  );
+};
+
+export default Login;
