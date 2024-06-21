@@ -3,7 +3,11 @@
     - Create React App  using (npx create-react-app app-name)
     - Configured Tailwind
     - Header
+    - Routing
     - Login Form
+    - Sing up Form
+    - Form validation
+    - useRef Hook
 
 # Features
 
