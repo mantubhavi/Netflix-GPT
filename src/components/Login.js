@@ -16,7 +16,7 @@ const Login = () => {
 
   const handleButtonClick = (e) => {
     const message = checkValidData(
-      nameRef.current.value,
+      isSignInForm ? null : nameRef.current.value,
       emailRef.current.value,
       passwordRef.current.value
     );

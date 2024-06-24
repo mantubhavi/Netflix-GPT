@@ -8,7 +8,7 @@ export const checkValidData = (name, email, password) => {
 
   const isNameValid = /(^[a-zA-Z][a-zA-Z\s]{0,20}[a-zA-Z]$)/.test(name);
 
-  if (isNameValid !== null && !isNameValid) {
+  if (!isNameValid) {
     return "Full Name is not valid.";
   }
 
